@@ -1,5 +1,8 @@
+// This two things needed to be imported
 import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.*;
+//import org.junit.Test;
+
 
 public class ProblemsTest {
   @Test
@@ -9,10 +12,27 @@ public class ProblemsTest {
     assertEquals("Answer: 233168", result);
   }
 
-  @Test
+  @Test // this need to be here to be tested
   public void testEvenFibNum(){
     Problems problem = new Problems();
     String result = problem.evenFibNum();
     assertEquals("You need go back to 210!",result,"Answer: 4613732");
+  }
+
+  public void testIsPrime(){
+    Problems problem = new Problems();
+
+  }
+
+//  @Test
+  public void testInformation(){
+//    assertTrue();
+//    assertFalse();
+//    assertEquals();
+//    assertSame();
+//    assertNotSame();
+//    assertNull();
+//    assertNotNull();
+//    fail("message here");
   }
 }

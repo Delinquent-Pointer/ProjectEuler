@@ -61,4 +61,9 @@ public class Problems {
 
     return answer;
   }
+
+  public boolean isPrime (int number){
+
+    return false;
+  }
 }
