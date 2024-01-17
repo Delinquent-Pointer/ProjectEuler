@@ -16,7 +16,7 @@ public class ProblemsTest {
   public void testEvenFibNum(){
     Problems problem = new Problems();
     String result = problem.evenFibNum();
-    assertEquals("You need go back to 210!",result,"Answer: 4613732");
+    assertEquals("Final answer isn't correct.",result,"Answer: 4613732");
   }
 
   public void testIsPrime(){
