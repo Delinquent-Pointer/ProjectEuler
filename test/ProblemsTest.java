@@ -39,6 +39,7 @@ public class ProblemsTest {
 //    assertNotNull();
 //    fail("message here");
     // Timeout should be in every time for infinite loop
+    // could try size of the objects too
 
   }
 
