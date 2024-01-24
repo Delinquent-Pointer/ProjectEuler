@@ -14,5 +14,14 @@ public class Main {
     System.out.println(projectEuler.evenFibNum());
 
     System.out.println(projectEuler.largestPrimeFactor());
+
+    // Personal Notes
+    var drinkSize = CupSize.LARGE;
+    System.out.println(
+      "You ordered coffee in " + drinkSize + " size and that is " + drinkSize.getOunces()
+        + " ounces");
+
+    // Review File IO
+
   }
 }

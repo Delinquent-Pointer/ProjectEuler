@@ -54,15 +54,14 @@ public class Problems {
     }
   }
 
-  public String largestPrimeFactor(){
+  public String largestPrimeFactor() {
     problemNumber++;
     System.out.println(header + problemNumber);
-
 
     return answer;
   }
 
-  public boolean isPrime (int number){
+  public boolean isPrime(int number) {
 
     return false;
   }
