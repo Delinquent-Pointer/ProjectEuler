@@ -65,4 +65,28 @@ public class Problems {
 
     return false;
   }
+
+  public String largestPalindromeProduct(){
+    problemNumber++;
+    System.out.println(header + problemNumber);
+
+    // method starts here
+
+    return answer;
+  }
+
+  public boolean isPalindrome(int number) {
+    String checkNumber = Integer.toString(number);
+//    int length = checkNumber.length();
+//    for (int i = 0; i < length / 2; i++) {
+//      if (checkNumber.charAt(i) != checkNumber.charAt(length - 1 - i)) {
+//        return false;
+//      }
+//    }
+
+    String reversed = new StringBuilder(checkNumber).reverse().toString();
+
+    return checkNumber.equals(reversed);
+  }
+
 }

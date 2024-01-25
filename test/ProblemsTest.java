@@ -19,42 +19,28 @@ public class ProblemsTest {
     assertEquals("Final answer isn't correct.","Answer: 4613732", actual);
   }
 
+  @Test
   public void testIsPrime(){
     Problems problem = new Problems();
 
   }
 
   /**
-   * Class notes 1
+   * Java documentation example
    */
 
-//  @Test
-  public void testInformation(){
-//    assertTrue();
-//    assertFalse();
-//    assertEquals();
-//    assertSame();
-//    assertNotSame();
-//    assertNull();
-//    assertNotNull();
-//    fail("message here");
-    // Timeout should be in every time for infinite loop
-    // could try size of the objects too
-
-  }
-
-  /**
-   * Class notes 2
-   */
-  /*
   @Test
-  public void TestDateMonthYear(){
-    int year = 2024;
-    int month = 12;
-    int day = 32; // depends on month check what month then days associate aka leap year too
-    assertFalse("Invalid year: Year cannot be less than zero", year < 0);
-    assertFalse("Invalid month: month cannot be less than 1 or bigger than 12", month < 0 || month > 12);
-    assertFalse("Invalid month: day cannot be less than 1 or bigger than 12", day < 0 || day > 31);
+  public void testIsPalindrome (){
+    Problems problem = new Problems();
+    boolean actual = problem.isPalindrome(9009);
+    assertTrue("This should be a palindrome", actual);
+    actual = problem.isPalindrome(123);
+    assertFalse("This should NOT be a palindrome", actual);
+    actual = problem.isPalindrome(646);
+    assertTrue("This should be a palindrome", actual);
+    actual = problem.isPalindrome(-151);
+    assertFalse("This should NOT be a palindrome", actual);
   }
-*/
+
+
 }

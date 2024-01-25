@@ -5,15 +5,11 @@ public class Main {
 
     System.out.println(projectEuler.m3or5());
 
-//    for (int i = 0; i < 15; i++){
-//      System.out.println(projectEuler.fib(i));
-//    }
-
-//    System.out.println(projectEuler.fib(3));
-
     System.out.println(projectEuler.evenFibNum());
 
     System.out.println(projectEuler.largestPrimeFactor());
+
+    System.out.println(projectEuler.largestPalindromeProduct());
 
     // Personal Notes
     var drinkSize = CupSize.LARGE;
@@ -22,6 +18,7 @@ public class Main {
         + " ounces");
 
     // Review File IO
+
 
   }
 }
