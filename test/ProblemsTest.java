@@ -1,10 +1,13 @@
 // This two things needed to be imported
+
 import static org.junit.Assert.*;
+
 import org.junit.*;
 //import org.junit.Test;
 
 
 public class ProblemsTest {
+
   @Test
   public void testM3or5() {
     Problems problem = new Problems();
@@ -13,14 +16,14 @@ public class ProblemsTest {
   }
 
   @Test // this need to be here to be tested
-  public void testEvenFibNum(){
+  public void testEvenFibNum() {
     Problems problem = new Problems();
     String actual = problem.evenFibNum();
-    assertEquals("Final answer isn't correct.","Answer: 4613732", actual);
+    assertEquals("Final answer isn't correct.", "Answer: 4613732", actual);
   }
 
   @Test
-  public void testIsPrime(){
+  public void testIsPrime() {
     Problems problem = new Problems();
 
   }
@@ -30,7 +33,7 @@ public class ProblemsTest {
    */
 
   @Test
-  public void testIsPalindrome (){
+  public void testIsPalindrome() {
     Problems problem = new Problems();
     boolean actual = problem.isPalindrome(9009);
     assertTrue("This should be a palindrome", actual);
