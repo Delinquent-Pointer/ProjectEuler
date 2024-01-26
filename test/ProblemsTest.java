@@ -1,12 +1,11 @@
 // This two things needed to be imported
-
 import static org.junit.Assert.*;
+import org.junit.*; //import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.runners.MethodSorters;
 
-import org.junit.*;
-
-//import org.junit.Test;
-
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProblemsTest {
 
   @Test(timeout = 100)
@@ -60,5 +59,11 @@ public class ProblemsTest {
     assertFalse("This should NOT be a palindrome", result);
   }
 
+  @ParameterizedTest
+  @ValueSource(ints = {98089, 161})
+  void palindrome_ShouldReturnTrue(int number) {
+    Problems result = new Problems();
+    assertTrue("This should be a palindrome", result.isPalindrome(number));
+  }
 
 }
