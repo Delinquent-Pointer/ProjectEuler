@@ -1,13 +1,10 @@
+import java.util.Stack;
+
 public class Problems {
 
   private int problemNumber = 0;
   private final String header = "Project Euler Problem #";
   private final String answer = "Answer: ";
-
-//  Problems (){
-//    problemNumber++;
-//    System.out.println(header + problemNumber);
-//  }
 
   /**
    * problem 1
@@ -66,27 +63,53 @@ public class Problems {
     return false;
   }
 
-  public String largestPalindromeProduct(){
+  /**
+   * problem 4 start with 999 x 999 = largest number possible if product answer is not palindrome
+   * then keep using pop() to find the largest
+   */
+
+  public String largestPalindromeProduct() {
     problemNumber++;
     System.out.println(header + problemNumber);
 
     // method starts here
+    Stack<Integer> number1 = new Stack<>();
+    Stack<Integer> number2 = new Stack<>();
+    for (int i = 999; i >= 100; i--) {
+      number1.push(i);
+      number2.push(i);
+    }
 
-    return answer;
+    int result1 = 0, result2 = 0, product = 0;
+
+    while (!number1.isEmpty()) {
+      int i = number1.pop();
+      number2.pop();
+
+      for (int j : number2) {
+        int tempProduct = i * j;
+        if (product >= tempProduct) {
+          break;
+        }
+
+        if (isPalindrome(tempProduct)) {
+          product = tempProduct;
+          result1 = i;
+          result2 = j;
+        }
+      }
+    }
+
+    return Integer.toString(result1) + "," + Integer.toString(result2) + "," + product;
   }
 
   public boolean isPalindrome(int number) {
     String checkNumber = Integer.toString(number);
-//    int length = checkNumber.length();
-//    for (int i = 0; i < length / 2; i++) {
-//      if (checkNumber.charAt(i) != checkNumber.charAt(length - 1 - i)) {
-//        return false;
-//      }
-//    }
-
     String reversed = new StringBuilder(checkNumber).reverse().toString();
-
     return checkNumber.equals(reversed);
   }
 
+  public <T> T add(T a, T b) {
+    return add(a, b);
+  }
 }

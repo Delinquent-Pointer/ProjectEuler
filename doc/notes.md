@@ -31,3 +31,9 @@
       assertFalse("Invalid month: month cannot be less than 1 or bigger than 12", month < 0 || month > 12);
       assertFalse("Invalid month: day cannot be less than 1 or bigger than 12", day < 0 || day > 31);
       }
+      //    int length = checkNumber.length();
+      //    for (int i = 0; i < length / 2; i++) {
+      //      if (checkNumber.charAt(i) != checkNumber.charAt(length - 1 - i)) {
+      //        return false;
+      //      }
+      //    }

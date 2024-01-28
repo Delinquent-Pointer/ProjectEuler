@@ -1,4 +1,3 @@
-// This two things needed to be imported
 import static org.junit.Assert.*;
 import org.junit.*; //import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,12 +5,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.runners.MethodSorters;
 import org.junit.runners.*;
 import org.junit.runner.*;
-import org.junit.runners.Suite.SuiteClasses;
+//import org.junit.runners.Suite.SuiteClasses;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-  Problems.class
-})
+//@RunWith(Suite.class)
+//@Suite.SuiteClasses({
+//  Problems.class
+//})
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProblemsTest {
@@ -39,7 +38,7 @@ public class ProblemsTest {
 //  }
 
   /**
-   * Java documentation example
+   * Testing Problem #3
    */
 
   @Test(timeout = TIMEOUT)
@@ -78,8 +77,36 @@ public class ProblemsTest {
 
   @ParameterizedTest
   @ValueSource(ints = {-999, 1234})
-  void palindrome_ShouldReturnFalse(int number) {
+  public void palindrome_ShouldReturnFalse(int number) {
     Problems result = new Problems();
     assertFalse("This should NOT be a palindrome", result.isPalindrome(number));
   }
-}
+
+  @Test(timeout = TIMEOUT)
+  public void LPP_max_product_value_1st_result() {
+    Problems problem = new Problems();
+
+    String answer = problem.largestPalindromeProduct();
+    String[] results = answer.split(",");
+    int actual1 = Integer.parseInt(results[0]);
+
+    LPP_input_helper_function(actual1);
+  }
+
+  @Test(timeout = TIMEOUT)
+  public void LPP_max_product_value_2nd_result() {
+    Problems problem = new Problems();
+
+    String answer = problem.largestPalindromeProduct();
+    String[] results = answer.split(",");
+    int actual2 = Integer.parseInt(results[1]);
+
+    LPP_input_helper_function(actual2);
+  }
+
+  private void LPP_input_helper_function(int actual) {
+    assertFalse("Limit! actual > 999 or actual < 0", actual < 0 || actual > 999);
+  }
+
+
+}// END OF TEST
