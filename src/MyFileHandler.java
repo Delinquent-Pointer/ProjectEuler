@@ -52,5 +52,17 @@ public class MyFileHandler {
     } finally {
       // Close any resources if needed
     }
+    int tempMaxProduct = 0;
+    int[] tempProducts = new int[4];
+
+    final int numRows = 20;
+    final int numCols = 20;
+    int[][] matrix = new int[numRows][numCols];
+    for(int r = 0; r <numRows; r++){
+      for(int c = 0; c < numCols; c++){
+        matrix[r][c] = .nextInt();
+      }
+    }
+
   }
 }
